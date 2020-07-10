@@ -1,0 +1,12 @@
+@import "variables";
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  .container {
+    width: $container-width;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+  }
+}
