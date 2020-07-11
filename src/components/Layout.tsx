@@ -14,7 +14,9 @@ const Layout = ({ children }: { children: JSX.Element }) => (
         <h2 className={styles.title_ja}>{title.ja}</h2>
       </section>
     </header>
-    {children}
+    <main>
+      {children}
+    </main>
     <Footer />
   </>
 )
