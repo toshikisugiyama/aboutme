@@ -1,0 +1,20 @@
+.footer {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .sns_icons {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    .sns_icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+  }
+}
