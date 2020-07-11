@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title_en {
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+  }
+  .title_ja {
+    font-size: 1rem;
+  }
+  .profile_image {
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
