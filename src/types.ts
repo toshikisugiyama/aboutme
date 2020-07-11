@@ -32,3 +32,12 @@ export interface HistoryType {
   term: string,
   content: string
 }
+
+export interface FormItemType {
+  label: {
+    en: string,
+    ja: string
+  },
+  tag: string,
+  type?: string
+}

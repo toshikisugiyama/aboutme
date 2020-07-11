@@ -20,7 +20,7 @@ const profile: ProfileType = {
 const Home = () => {
   return (
     <Layout>
-      <main className="container">
+      <section className="container">
         <p>{`${profile.birthYear}年 ${profile.birthPlace}出身`}</p>
         <p className={styles.summary}>{profile.summary}</p>
         <table>
@@ -33,7 +33,7 @@ const Home = () => {
             ))}
           </tbody>
         </table>
-      </main>
+      </section>
     </Layout>
   )
 }
