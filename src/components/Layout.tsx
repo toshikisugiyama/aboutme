@@ -1,4 +1,4 @@
-import Footer from '../components/Footer'
+import Footer from './Footer'
 import { TitleType } from '../types'
 import styles from '../styles/layout.module.scss'
 const title: TitleType  = {en: 'Sugiyama Toshiki', ja: '杉山俊樹'}

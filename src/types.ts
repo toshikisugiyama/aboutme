@@ -20,3 +20,15 @@ export interface TitleType {
   en: string,
   ja: string
 }
+
+export interface ProfileType {
+  birthYear: number,
+    birthPlace: string,
+    history: Array<HistoryType>,
+    summary: string
+}
+
+export interface HistoryType {
+  term: string,
+  content: string
+}
