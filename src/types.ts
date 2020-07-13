@@ -49,3 +49,9 @@ export interface PortfolioType {
   },
   description: string
 }
+
+export interface ServiceType {
+  title: string,
+  url: string,
+  image: string
+}
