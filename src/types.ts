@@ -41,3 +41,11 @@ export interface FormItemType {
   tag: string,
   type?: string
 }
+
+export interface PortfolioType {
+  title: {
+    en: string,
+    ja: string
+  },
+  description: string
+}
