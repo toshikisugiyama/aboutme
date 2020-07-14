@@ -3,12 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   .title_en {
     margin: 0 auto 1rem;
     font-size: 2rem;
+    text-align: center;
   }
   .title_ja {
     font-size: 1rem;
+    text-align: center;
   }
   .profile_image {
     border-radius: 50%;
@@ -17,5 +20,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .array {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    &__right {
+      right: 0;
+      transform: translate(-1rem, -20%);
+    }
+    &__left {
+      left: 0;
+      transform: translate(1rem, -20%);
+    }
   }
 }
