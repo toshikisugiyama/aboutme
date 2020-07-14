@@ -1,0 +1,34 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  .item {
+    margin: 1rem 0;
+    padding: 1rem;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    .date {
+      text-align: right;
+    }
+    .link {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.article {
+  .title {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  .date {
+    text-align: right;
+  }
+}

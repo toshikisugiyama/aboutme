@@ -6,7 +6,9 @@ import Capitalize from '../components/Capitalize'
 const Header = () => {
   const router: NextRouter = useRouter()
   const headerInfo: HeaderInfoType =
-    router.pathname === '/blog'
+    router.pathname === '/blog/[id]'
+    ? {title: {en: 'blog', ja: 'ブログ'}, link: {prev: '/blog', next: '/blog'}}
+    : router.pathname === '/blog'
     ? {title: {en: 'blog', ja: 'ブログ'}, link: {prev: '/', next: '/portfolio'}}
     : router.pathname === '/portfolio'
     ? {title: {en: 'portfolio', ja: 'ポートフォリオ'}, link: {prev: '/blog', next: '/contact'}}
