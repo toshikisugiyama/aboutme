@@ -2,11 +2,9 @@ import Layout from '../components/Layout'
 import { FormItemType } from '../types'
 import styles from '../styles/contact.module.scss'
 import Button from '../components/Button'
+import Capitalize from '../components/Capitalize'
 
 const Contact = () => {
-  const capitalize = (str: string) => (
-    str.charAt(0).toUpperCase() + str.slice(1).toLocaleLowerCase()
-  )
   const formItems: Array<FormItemType> = [
     { label: {en: 'name', ja: 'お名前'}, tag: 'input', type: 'text' },
     { label: {en: 'email', ja: 'メール'}, tag: 'input', type: 'email' },
@@ -21,7 +19,7 @@ const Contact = () => {
             formItems.map((item: FormItemType, index: number) => (
               <div key={item.label.en} className={styles.form__item}>
                 <label htmlFor={item.label.en} className={styles.label}>
-                  {`${item.label.ja} / ${capitalize(item.label.en)}`}
+                  {`${item.label.ja} / ${Capitalize(item.label.en)}`}
                 </label>
                 {
                   item.tag === 'input'
