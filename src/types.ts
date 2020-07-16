@@ -31,7 +31,8 @@ export interface ProfileType {
   birthYear: number,
     birthPlace: string,
     history: Array<HistoryType>,
-    summary: string
+    summary: string,
+    skills: Array<string>
 }
 
 export interface HistoryType {

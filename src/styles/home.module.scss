@@ -1,8 +1,29 @@
-.th,
-.td {
-  padding: 1rem 0
-}
-.summary {
-  text-align: justify;
-  line-height: 1.5;
+.section {
+  margin: 0 0 3rem;
+  .title {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .th,
+  .td {
+    padding: 0.8rem 0.5rem;
+    text-align: left;
+  }
+  .summary {
+    text-align: justify;
+    line-height: 1.5;
+  }
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .skill {
+      background-color: #c0c0c0;
+      font-size: 0.8rem;
+      margin: 0.2rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.5rem;
+    }
+  }
 }

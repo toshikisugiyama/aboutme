@@ -21,7 +21,7 @@ const Header = () => {
       <section className={`container ${styles.container}`}>
         <h1 className={styles.title_en}>{Capitalize(headerInfo.title.en)}</h1>
         <div className={styles.profile_image}>
-          <img src={profileImage} alt="profile image" width={100} height={100} />
+          <img src={profileImage} alt="profile image" width={150} height={150} />
         </div>
         <h2 className={styles.title_ja}>{headerInfo.title.ja}</h2>
         <Link href={headerInfo.link.prev}><a className={`${styles.array} ${styles.array__left}`}>&lt;</a></Link>
