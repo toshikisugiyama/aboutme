@@ -2,6 +2,7 @@ import Layout from '../../components/Layout'
 import Head from 'next/head'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/Date'
+import Topics from '../../components/Topics'
 import styles from '../../styles/blog.module.scss'
 
 export const getStaticProps = async ({ params }: {params: any}) => {
@@ -30,6 +31,7 @@ export const Post = ({ postData }: {postData: any}) => {
         </Head>
         <article className={`container ${styles.article}`}>
           <h1 className={styles.title}>{postData.title}</h1>
+          <Topics topicsString={postData.topics} />
           <div className={styles.date}>
             <Date dateString={postData.date} />
           </div>
