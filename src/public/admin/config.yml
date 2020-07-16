@@ -4,6 +4,7 @@ backend:
 media_folder: src/public/images/uploads
 public_folder: /images/uploads
 site_url: https://aboutme-toshikisugiyama.netlify.app
+logo_url: /images/profile.svg
 collections:
   - name: "blog"
     label: "Blog"
