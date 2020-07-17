@@ -4,7 +4,7 @@ import { PageType } from '../types'
 
 const Layout = ({ children, fileNames }: { children: JSX.Element, fileNames: Array<PageType> }) => (
   <>
-    <Header />
+    <Header fileNames={fileNames} />
     <main>
       {children}
     </main>

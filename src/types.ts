@@ -17,14 +17,17 @@ export interface SnsIconType {
 }
 
 export interface HeaderInfoType {
-  title: {
-    en: string,
-    ja: string,
-  },
+  title: TitleType,
   link: {
       prev: string,
       next: string,
   },
+  route: string
+}
+
+export interface TitleType {
+  en: string,
+  ja: string,
 }
 
 export interface ProfileType {

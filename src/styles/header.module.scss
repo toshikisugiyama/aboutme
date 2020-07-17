@@ -25,6 +25,22 @@
     position: absolute;
     top: 50%;
     font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .label {
+      font-size: 0.1rem;
+      font-weight: bold;
+    }
+    &::after {
+      content: '';
+      background-color: #ffffff;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      transform: translateY(-1.5rem);
+      z-index: -1;
+    }
     &__right {
       right: 0;
       transform: translate(-1rem, -20%);
