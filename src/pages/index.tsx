@@ -1,6 +1,12 @@
 import Layout from '../components/Layout'
-import { ProfileType, HistoryType } from '../types'
+import { ProfileType, HistoryType, PageType } from '../types'
 import styles from '../styles/home.module.scss'
+import { getPages } from '../lib/pages'
+
+export const getStaticProps = () => {
+  const fileNames: Array<PageType> = getPages()
+  return {props: {fileNames}}
+}
 
 const profile: ProfileType = {
   birthYear: 1990,
@@ -18,9 +24,9 @@ const profile: ProfileType = {
   skills: ['HTML(Pug)', 'CSS(SCSS)', 'JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'React.js', 'Next.js', 'Gatsby', 'PHP', 'Laravel', 'Git', 'WordPress', 'Netlify', 'AWS', 'Illustrator', '宅地建物取引士', 'スキューバーダイビング PADI Open Water', 'フォークリフト運転', 'バーベキュー初級インストラクター', '家庭菜園検定3級', '英検2級', 'そろばん1級']
 }
 
-const Home = () => {
+const Home = ({fileNames}: {fileNames: Array<PageType>}) => {
   return (
-    <Layout>
+    <Layout fileNames={fileNames}>
       <section className="container">
         <section className={styles.section}>
           <p>{`${profile.birthYear}年 ${profile.birthPlace}出身`}</p>

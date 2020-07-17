@@ -4,12 +4,16 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/Date'
 import Topics from '../../components/Topics'
 import styles from '../../styles/blog.module.scss'
+import { getPages } from '../../lib/pages'
+import { PageType } from '../../types'
 
 export const getStaticProps = async ({ params }: {params: any}) => {
   const postData = await getPostData(params.id)
+  const fileNames: Array<PageType> = getPages()
   return {
     props: {
-      postData
+      postData,
+      fileNames
     }
   }
 }
@@ -22,9 +26,9 @@ export const getStaticPaths = () => {
   }
 }
 
-export const Post = ({ postData }: {postData: any}) => {
+export const Post = ({ postData, fileNames }: {postData: any, fileNames: Array<PageType>}) => {
   return (
-    <Layout>
+    <Layout fileNames={fileNames}>
       <>
         <Head>
           <title>{postData.title}</title>

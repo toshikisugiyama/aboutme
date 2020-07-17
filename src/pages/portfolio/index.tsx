@@ -1,15 +1,22 @@
 import Layout from '../../components/Layout'
 import Link from 'next/link'
-import { PortfolioType } from '../../types'
+import { PortfolioType, PageType } from '../../types'
 import Capitalize from '../../components/Capitalize'
 import styles from '../../styles/portfolio.module.scss'
+import { getPages } from '../../lib/pages'
+
+export const getStaticProps = () => {
+  const fileNames: Array<PageType> = getPages()
+  return {props: {fileNames}}
+}
+
 const portfolios: Array<PortfolioType> = [
   {title: {en: 'service', ja: 'サービス'}, description: '主にReact, Vue.js, Laravel などで作った作品'},
   {title: {en: 'drawing', ja: 'イラスト'}, description: 'Adobe Illustrator で描いたイラスト'}
 ]
-const Portfolio = () => {
+const Portfolio = ({fileNames}: {fileNames: Array<PageType>}) => {
   return (
-    <Layout>
+    <Layout fileNames={fileNames}>
       <section className="container">
         {portfolios.map((portfolio: PortfolioType) => (
           <div key={portfolio.title.en} className={styles.item}>

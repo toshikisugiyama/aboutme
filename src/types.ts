@@ -62,3 +62,8 @@ export interface ServiceType {
   url: string,
   image: string
 }
+
+export interface PageType {
+  name: string,
+  value: number
+}

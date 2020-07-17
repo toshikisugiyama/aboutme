@@ -4,18 +4,21 @@ import Date from '../../components/Date'
 import Topics from '../../components/Topics'
 import Link from 'next/link'
 import styles from '../../styles/blog.module.scss'
+import { getPages } from '../../lib/pages'
 
 export const getStaticProps = async () => {
   const allPostsData = getStoredPostsData()
+  const fileNames = getPages()
   return {
     props: {
-      allPostsData
+      allPostsData,
+      fileNames
     }
   }
 }
 
-const Blog = ({ allPostsData }: {allPostsData: any}) => (
-  <Layout>
+const Blog = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: any}) => (
+  <Layout fileNames={fileNames}>
     <section className={`container ${styles.list}`}>
       {allPostsData.map(({id, title, date, topics}: {id: string, title: string, date: string, topics: string}) => (
         <article key={id} className={styles.item}>
