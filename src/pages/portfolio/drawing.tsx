@@ -1,8 +1,9 @@
 import Layout from '../../components/Layout'
 import Link from 'next/link'
-import styles from '../../styles/drawing.module.scss'
+import styles from '../../styles/portfolio.module.scss'
 import { getPages } from '../../lib/pages'
 import { PageType } from '../../types'
+import PortfolioNav from '../../components/PortfolioNav'
 
 export const getStaticProps = () => {
   const fileNames: Array<PageType> = getPages()
@@ -16,7 +17,10 @@ const images: Array<string> = [...Array(imageFiles)].map((_: undefined, i: numbe
 const Drawing = ({fileNames}: {fileNames: Array<PageType>}) => {
   return (
     <Layout fileNames={fileNames}>
-      <section className="container">
+      <section className={`container ${styles.drawing}`}>
+        <div className={styles.nav}>
+          <PortfolioNav />
+        </div>
         <ul className={styles.lists}>
           {images.map((image: string) => (
             <li key={image} className={styles.item}>
