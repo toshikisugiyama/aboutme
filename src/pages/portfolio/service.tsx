@@ -1,15 +1,22 @@
 import Layout from '../../components/Layout'
-import { ServiceType } from '../../types'
+import { ServiceType, PageType } from '../../types'
 import styles from '../../styles/service.module.scss'
+import { getPages } from '../../lib/pages'
+
+export const getStaticProps = () => {
+  const fileNames: Array<PageType> = getPages()
+  return {props: {fileNames}}
+}
+
 const services: Array<ServiceType> = [
   {title: '名前をつけて早く呼ぶゲーム', url: 'https://toshikisugiyama-images.netlify.com', image: 'https://placehold.it/300x200'},
   {title: '都道府県別の総人口推移グラフを表示するSPA', url: 'https://population-app.netlify.app/', image: 'https://placehold.it/300x200'},
   {title: 'タスク管理アプリ', url: 'http://obscure-falls-29065.herokuapp.com', image: 'https://placehold.it/300x200'},
   {title: '発表会開始までのカウントダウン', url: 'https://toshikisugiyama-ns-countdown.netlify.com', image: 'https://placehold.it/300x200'},
 ]
-const Service = () => {
+const Service = ({fileNames}: {fileNames: Array<PageType>}) => {
   return (
-    <Layout>
+    <Layout fileNames={fileNames}>
       <section className="container">
         <ul className={styles.list}>
           {

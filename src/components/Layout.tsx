@@ -1,13 +1,14 @@
 import Header from './Header'
 import Footer from './Footer'
+import { PageType } from '../types'
 
-const Layout = ({ children }: { children: JSX.Element }) => (
+const Layout = ({ children, fileNames }: { children: JSX.Element, fileNames: Array<PageType> }) => (
   <>
     <Header />
     <main>
       {children}
     </main>
-    <Footer />
+    <Footer fileNames={fileNames} />
   </>
 )
 

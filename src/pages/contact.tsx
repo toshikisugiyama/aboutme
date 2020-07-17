@@ -1,17 +1,23 @@
 import Layout from '../components/Layout'
-import { FormItemType } from '../types'
+import { FormItemType, PageType } from '../types'
 import styles from '../styles/contact.module.scss'
 import Button from '../components/Button'
 import Capitalize from '../components/Capitalize'
+import { getPages } from '../lib/pages'
 
-const Contact = () => {
+export const getStaticProps = () => {
+  const fileNames: Array<PageType> = getPages()
+  return {props: {fileNames}}
+}
+
+const Contact = ({fileNames}: {fileNames: Array<PageType>}) => {
   const formItems: Array<FormItemType> = [
     { label: {en: 'name', ja: 'お名前'}, tag: 'input', type: 'text' },
     { label: {en: 'email', ja: 'メール'}, tag: 'input', type: 'email' },
     { label: {en: 'message', ja: 'メッセージ'}, tag: 'textarea' }
   ]
   return (
-    <Layout>
+    <Layout fileNames={fileNames}>
       <section className="container">
         <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact"/>
