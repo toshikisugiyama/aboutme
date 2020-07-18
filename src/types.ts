@@ -64,3 +64,9 @@ export interface PageType {
   name: string,
   value: number
 }
+
+export interface ImageType {
+  id: string,
+  src: string,
+  url: string
+}
