@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/Date'
 import Topics from '../../components/Topics'
-import styles from '../../styles/blog.module.scss'
+import styles from '../../styles/post.module.scss'
 import { getPages } from '../../lib/pages'
 import { PageType } from '../../types'
 
