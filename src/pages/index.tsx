@@ -13,7 +13,7 @@ const profile: ProfileType = {
   birthPlace: '兵庫県',
   history: [
     {term: '2019年10月〜現在', content: 'オンラインプログラミングスクール メンター'},
-    {term: '2019年4月〜2019年9月', content: 'NexSeed.Incでインターン(エンジニアクラス補佐・オフショア業務)'},
+    {term: '2019年4月〜2019年9月', content: 'NexSeed.Incでインターン(エンジニアクラス補佐・オフショア業務・自社サービス開発)'},
     {term: '2018年7月〜現在', content: 'WordPressによるホームページ作成'},
     {term: '2018年4月〜2018年6月', content: 'フィリピン・セブ島のNexSeed.Incで留学。英語とWebコース（HTML, CSS, PHP, Git, GitHub）で学ぶ。'},
     {term: '2015年4月〜2018年3月', content: '食品会社にて食酢の発酵、調合を行う。ITによる製造管理システムの導入をきっかけに、プログラミングに興味を持つ。'},
