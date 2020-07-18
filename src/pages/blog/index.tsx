@@ -23,7 +23,7 @@ const Blog = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: any}) 
       {allPostsData.map(({id, title, date, topics}: {id: string, title: string, date: string, topics: string}) => (
         <article key={id} className={styles.item}>
           <Topics topicsString={topics} />
-          <h2>{title}</h2>
+          <h2 className={styles.title}>{title}</h2>
           <div className={styles.date}>
             <Date dateString={date} />
           </div>

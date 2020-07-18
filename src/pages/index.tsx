@@ -16,7 +16,7 @@ const profile: ProfileType = {
     {term: '2019年4月〜2019年9月', content: 'NexSeed.Incでインターン(エンジニアクラス補佐・オフショア業務)'},
     {term: '2018年7月〜現在', content: 'WordPressによるホームページ作成'},
     {term: '2018年4月〜2018年6月', content: 'フィリピン・セブ島のNexSeed.Incで留学。英語とWebコース（HTML, CSS, PHP, Git, GitHub）で学ぶ。'},
-    {term: '2015年4月〜2018年3月', content: '微生物を使った研究をしていた経験から、食品会社にて食酢の発酵、調合を行う。ITによる製造管理システムの導入をきっかけに、プログラミングに興味を持つ。海外への興味もあり、留学のため退社。'},
+    {term: '2015年4月〜2018年3月', content: '食品会社にて食酢の発酵、調合を行う。ITによる製造管理システムの導入をきっかけに、プログラミングに興味を持つ。'},
     {term: '2013年4月〜2015年3月', content: '関西学院大学大学院 理工学研究科 海洋性珪藻のリン酸輸送体についての研究を行う。'},
     {term: '2009年4月〜2013年3月', content: '関西学院大学 理工学部 生命科学科 生命科学専攻'},
   ],
@@ -33,7 +33,7 @@ const Home = ({fileNames}: {fileNames: Array<PageType>}) => {
           <p className={styles.summary}>{profile.summary}</p>
         </section>
         <section className={styles.section}>
-          <h2 className={styles.title}>スキル・資格</h2>
+          <h3 className={styles.title}>スキル・資格</h3>
           <div className={styles.skills}>
             {profile.skills.map((skill: string) => (
               <span key={skill} className={styles.skill}>{skill}</span>
@@ -41,17 +41,15 @@ const Home = ({fileNames}: {fileNames: Array<PageType>}) => {
           </div>
         </section>
         <section className={styles.section}>
-          <h2 className={styles.title}>経歴</h2>
-          <table>
-            <tbody>
+          <h3 className={styles.title}>経歴</h3>
+          <section className={styles.history}>
               {profile.history.map((history: HistoryType, index: number) => (
-                <tr key={index}>
-                  <th className={styles.th}>{history.term}</th>
-                  <td className={styles.td}>{history.content}</td>
-                </tr>
+                <div key={index} className={styles.item}>
+                  <h4 className={styles.term}>{history.term}</h4>
+                  <p className={styles.content}>{history.content}</p>
+                </div>
               ))}
-            </tbody>
-          </table>
+          </section>
         </section>
       </section>
     </Layout>
