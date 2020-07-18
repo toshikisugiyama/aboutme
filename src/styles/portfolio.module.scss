@@ -54,15 +54,19 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    width: 90vw;
+    max-width: $container-width - 2rem;
+    margin: 0 auto;
     .item {
-      position: relative;
-      background-color: #333;
-      margin: 0.5rem;
+      padding: 0.5rem;
+      height: (90vw) / 3;
+      width: (90vw) / 3;
+      max-height: ($container-width -  2rem) / 3;
+      max-width: ($container-width - 2rem) / 3;
       .image {
-        height: $container-width / 3.5;
-        width: $container-width / 3.5;
-        max-height: 25vw;
-        max-width: 25vw;
+        position: relative;
+        height: 100%;
+        width: 100%;
       }
       .link {
         position: absolute;
