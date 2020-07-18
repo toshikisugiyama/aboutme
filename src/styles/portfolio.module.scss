@@ -13,7 +13,7 @@
     position: relative;
     width: $container-width / 2.2;
     max-width: 42vw;
-    margin: 0.5rem 0.1rem;
+    margin: 1rem 0.1rem;
     max-height: 25vw;
     background-color: #ffffff;
     border-radius: 1rem;
@@ -32,6 +32,10 @@
       padding: 1rem;
       .title {
         display: inline-block;
+        font-size: 1.8rem;
+      }
+      .date {
+        text-align: right;
       }
     }
     .link {
