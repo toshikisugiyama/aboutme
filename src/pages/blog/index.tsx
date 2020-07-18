@@ -7,7 +7,7 @@ import styles from '../../styles/blog.module.scss'
 import { getPages } from '../../lib/pages'
 
 export const getStaticProps = async () => {
-  const allPostsData = getStoredPostsData()
+  const allPostsData = getStoredPostsData('blog')
   const fileNames = getPages()
   return {
     props: {

@@ -8,7 +8,7 @@ import { getPages } from '../../lib/pages'
 import { PageType } from '../../types'
 
 export const getStaticProps = async ({ params }: {params: any}) => {
-  const postData = await getPostData(params.id, 'blog')
+  const postData = await getPostData(params.id, 'portfolio')
   const fileNames: Array<PageType> = getPages()
   return {
     props: {
@@ -19,7 +19,7 @@ export const getStaticProps = async ({ params }: {params: any}) => {
 }
 
 export const getStaticPaths = () => {
-  const paths = getAllPostIds('blog')
+  const paths = getAllPostIds('portfolio')
   return {
     paths,
     fallback: false
