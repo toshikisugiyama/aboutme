@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout'
-import { ServiceType, PageType } from '../../types'
+import { PageType } from '../../types'
 import styles from '../../styles/portfolio.module.scss'
 import { getPages } from '../../lib/pages'
 import PortfolioNav from '../../components/PortfolioNav'
@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export const getStaticProps = async () => {
   const allPostsData = getStoredPostsData('portfolio')
-  const fileNames = getPages()
+  const fileNames: Array<PageType> = getPages()
   return {
     props: {
       allPostsData,
@@ -19,14 +19,7 @@ export const getStaticProps = async () => {
   }
 }
 
-const services: Array<ServiceType> = [
-  {title: '名前をつけて早く呼ぶゲーム', url: 'https://toshikisugiyama-images.netlify.com', image: 'https://placehold.it/300x200'},
-  {title: '都道府県別の総人口推移グラフを表示するSPA', url: 'https://population-app.netlify.app/', image: 'https://placehold.it/300x200'},
-  {title: 'タスク管理アプリ', url: 'http://obscure-falls-29065.herokuapp.com', image: 'https://placehold.it/300x200'},
-  {title: '発表会開始までのカウントダウン', url: 'https://toshikisugiyama-ns-countdown.netlify.com', image: 'https://placehold.it/300x200'},
-]
-
-const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: any}) => (
+const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: Array<PageType>}) => (
   <Layout fileNames={fileNames}>
     <section className="container">
       <div className={styles.nav}>
