@@ -1,5 +1,5 @@
 .footer {
-  min-height: 10vh;
+  min-height: 10vmax;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -10,7 +10,8 @@
     margin: 0 auto 2rem;
   }
   .sns_icons {
-    width: 15rem;
+    min-width: 20rem;
+    width: 50vmin;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,5 +23,8 @@
       border-radius: 0.5rem;
       overflow: hidden;
     }
+  }
+  .copyright {
+    font-size: 1.2rem;
   }
 }

@@ -5,12 +5,16 @@
   justify-content: center;
   .item {
     margin: 1rem 0;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     position: relative;
     background-color: #ffffff;
     border-radius: 1rem;
+    .title {
+      font-size: 2rem;
+    }
     .date {
       text-align: right;
+      font-size: 1.2rem;
     }
     .link {
       position: absolute;
@@ -18,6 +22,7 @@
       left: 0;
       right: 0;
       bottom: 0;
+      margin: 0;
     }
   }
 }
@@ -25,9 +30,12 @@
 .article {
   .title {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 3rem;
+    margin: 0 0 3rem;
   }
   .date {
     text-align: right;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
   }
 }

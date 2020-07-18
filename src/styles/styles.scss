@@ -1,6 +1,7 @@
 @import "variables";
 html,
 body {
+  font-size: 62.5%;
   background-color: $page-background;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
   Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -13,6 +14,19 @@ body {
   }
   button {
     cursor: pointer;
+  }
+  p,
+  th,
+  td,
+  li,
+  label,
+  input,
+  textarea,
+  button {
+    font-size: 1.6rem;
+  }
+  p {
+    margin-bottom: 1rem;
   }
   a {
     text-decoration: none;

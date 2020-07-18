@@ -3,6 +3,7 @@ import { useRouter, NextRouter } from 'next/router'
 import { HeaderInfoType, PageType, TitleType } from '../types'
 import styles from '../styles/header.module.scss'
 import Capitalize from '../components/Capitalize'
+import Head from 'next/head'
 const Header = ({fileNames}: {fileNames: Array<PageType>}): JSX.Element => {
   const router: NextRouter = useRouter()
   const name: TitleType = {en: 'sugiyama toshiki', ja: 'スギヤマ トシキ'}
@@ -72,11 +73,11 @@ const Header = ({fileNames}: {fileNames: Array<PageType>}): JSX.Element => {
           </Link>
         </h1>
         <div className={styles.profile_image}>
-          <img src={profileImage} alt="profile image" width={150} height={150} />
+          <Link href="/"><a><img src={profileImage} alt="profile image" width={150} height={150} /></a></Link>
         </div>
         <h2 className={styles.title_ja}>{headerInfo.title.ja}</h2>
-        <Link href={headerInfo.link.prev}><a className={`${styles.array} ${styles.array__left}`}>&lt;<span className={styles.label}>{setLabel(headerInfo.link.prev)}</span></a></Link>
-        <Link href={headerInfo.link.next}><a className={`${styles.array} ${styles.array__right}`}>&gt;<span className={styles.label}>{setLabel(headerInfo.link.next)}</span></a></Link>
+        <Link href={headerInfo.link.prev}><a className={`${styles.arrow} ${styles.arrow__left}`}>&lt;<span className={styles.label}>{setLabel(headerInfo.link.prev)}</span></a></Link>
+        <Link href={headerInfo.link.next}><a className={`${styles.arrow} ${styles.arrow__right}`}>&gt;<span className={styles.label}>{setLabel(headerInfo.link.next)}</span></a></Link>
       </section>
     </header>
   )
