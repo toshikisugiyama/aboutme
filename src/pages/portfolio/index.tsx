@@ -3,10 +3,20 @@ import { ServiceType, PageType } from '../../types'
 import styles from '../../styles/portfolio.module.scss'
 import { getPages } from '../../lib/pages'
 import PortfolioNav from '../../components/PortfolioNav'
+import { getStoredPostsData } from '../../lib/posts'
+import Date from '../../components/Date'
+import Topics from '../../components/Topics'
+import Link from 'next/link'
 
-export const getStaticProps = () => {
-  const fileNames: Array<PageType> = getPages()
-  return {props: {fileNames}}
+export const getStaticProps = async () => {
+  const allPostsData = getStoredPostsData('portfolio')
+  const fileNames = getPages()
+  return {
+    props: {
+      allPostsData,
+      fileNames
+    }
+  }
 }
 
 const services: Array<ServiceType> = [
@@ -16,31 +26,28 @@ const services: Array<ServiceType> = [
   {title: '発表会開始までのカウントダウン', url: 'https://toshikisugiyama-ns-countdown.netlify.com', image: 'https://placehold.it/300x200'},
 ]
 
-const Portfolio = ({fileNames}: {fileNames: Array<PageType>}) => {
-  return (
-    <Layout fileNames={fileNames}>
-      <section className="container">
-        <div className={styles.nav}>
-          <PortfolioNav />
-        </div>
-        <ul className={styles.list}>
-          {
-            services.map((service: ServiceType) => (
-              <li key={service.title} className={styles.item}>
-                <div className={styles.imagewrapper}>
-                  <img src={service.image} alt={service.title} className={styles.image} />
-                </div>
-                <section className={styles.contents}>
-                  <h1 className={styles.title}>{service.title}</h1>
-                </section>
-                <a href={service.url} className={styles.link} ></a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </Layout>
-  )
-}
+const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: any}) => (
+  <Layout fileNames={fileNames}>
+    <section className="container">
+      <div className={styles.nav}>
+        <PortfolioNav />
+      </div>
+      <ul className={styles.list}>
+      {allPostsData.map(({id, title, date, topics}: {id: string, title: string, date: string, topics: string}) => (
+        <li key={id} className={styles.item}>
+          <section className={styles.contents}>
+            <Topics topicsString={topics} />
+            <h2 className={styles.title}>{title}</h2>
+            <div className={styles.date}>
+              <Date dateString={date} />
+            </div>
+          </section>
+          <Link href="/portfolio/[id]" as={`/portfolio/${id}`}><a className={styles.link}></a></Link>
+        </li>
+      ))}
+      </ul>
+    </section>
+  </Layout>
+)
 
 export default Portfolio
