@@ -28,13 +28,13 @@ const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: A
       <ul className={styles.list}>
       {allPostsData.map(({id, title, date, topics}: {id: string, title: string, date: string, topics: string}) => (
         <li key={id} className={styles.item}>
-          <section className={styles.contents}>
+          <article className={styles.contents}>
             <Topics topicsString={topics} />
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.date}>
               <Date dateString={date} />
             </div>
-          </section>
+          </article>
           <Link href="/portfolio/[id]" as={`/portfolio/${id}`}><a className={styles.link}></a></Link>
         </li>
       ))}
