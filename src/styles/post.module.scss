@@ -1,0 +1,59 @@
+.article {
+  a {
+    text-decoration: underline;
+  }
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 3rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+    margin: 0 0 2.8rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    margin: 0 0 2.5rem;
+  }
+  h4 {
+    font-size: 2.2rem;
+    margin: 0 0 2.2rem;
+  }
+  h5 {
+    font-size: 2rem;
+    margin: 0 0 2rem;
+  }
+  h6 {
+    font-size: 1.8rem;
+    margin: 0 0 1.8rem;
+  }
+  blockquote {
+    padding: 0 1rem;
+    border-left: 0.5rem solid #bbbbbb;
+    * {
+      color: #6a737d;
+    }
+  }
+  p > code {
+    background-color: #d8d8d8;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.4rem;
+    border: 0.1rem solid #333;
+    color: red;
+  }
+  pre {
+    padding: 1.6rem;
+    background-color: #364549;
+    cursor: text;
+    * {
+      color: #ffffff;
+      font-size: 1.2rem;
+    }
+  }
+  .date {
+    text-align: right;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+}
