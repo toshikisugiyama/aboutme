@@ -8,7 +8,7 @@ const copyRight = (): JSX.Element => {
   const firstYear: number = 2020
   const thisYear: number = new Date().getFullYear()
   const year: string = firstYear < thisYear ? `${firstYear} - ${thisYear}` : `${firstYear}`
-  return <span>&#169;{` ${year} ${Capitalize(name)}`}</span>
+  return <span className={styles.copyright}>&#169;{` ${year} ${Capitalize(name)}`}</span>
 }
 const snsIcons: Array<SnsIconType> = [
   {name: 'github', url: 'https://github.com/toshikisugiyama'},
@@ -32,7 +32,7 @@ const Footer = ({fileNames}: {fileNames: Array<PageType>}) => (
         </div>
       ))}
     </div>
-    <div> {copyRight()} </div>
+    <div>{copyRight()}</div>
   </footer>
 )
 

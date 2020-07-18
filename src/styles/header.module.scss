@@ -5,40 +5,42 @@
   align-items: center;
   position: relative;
   .title_en {
-    margin: 0 auto 1rem;
-    font-size: 2rem;
+    margin: 0 auto 2rem;
+    font-size: 3rem;
     text-align: center;
   }
   .title_ja {
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
   }
   .profile_image {
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 1rem;
+    margin: 0 auto 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .array {
+  .arrow {
     position: absolute;
     top: 50%;
-    font-size: 3rem;
+    font-size: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     .label {
-      font-size: 0.1rem;
+      font-size: 1.2rem;
       font-weight: bold;
+      margin-top: 1rem;
     }
     &::after {
       content: '';
       background-color: #ffffff;
-      width: 2rem;
-      height: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
-      transform: translateY(-1.5rem);
+      transform: translateY(-2rem);
       z-index: -1;
     }
     &__right {
