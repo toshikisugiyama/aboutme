@@ -1,4 +1,4 @@
-import { SnsIconType, PageType } from '../types'
+import { PageType } from '../types'
 import styles from '../styles/footer.module.scss'
 import Capitalize from '../components/Capitalize'
 import Navi from '../components/Navi'

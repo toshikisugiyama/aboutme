@@ -1,3 +1,4 @@
+@import "_variables";
 .section {
   margin: 0 0 5rem;
   .title {
@@ -27,7 +28,7 @@
     flex-wrap: wrap;
     align-items: center;
     .skill {
-      background-color: #c0c0c0;
+      background-color: $badge-color;
       margin: 0.2rem;
       padding: 0.3rem 0.8rem;
       border-radius: 0.5rem;

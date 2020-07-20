@@ -14,7 +14,6 @@
     width: $container-width / 2.2;
     max-width: 42vw;
     margin: 1rem 0.1rem;
-    max-height: 25vw;
     background-color: #ffffff;
     border-radius: 1rem;
     overflow: hidden;
@@ -30,12 +29,18 @@
     .contents {
       width: 100%;
       padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       .title {
         display: inline-block;
         font-size: 1.8rem;
       }
       .date {
         text-align: right;
+        font-size: 1.2rem;
+        width: 100%;
       }
     }
     .link {
@@ -54,15 +59,15 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    width: 90vw;
-    max-width: $container-width - 2rem;
+    width: $lists-width;
+    transform: translateX(-1rem);
+    max-width: $container-width;
     margin: 0 auto;
     .item {
-      padding: 0.5rem;
-      height: (90vw) / 3;
-      width: (90vw) / 3;
-      max-height: ($container-width -  2rem) / 3;
-      max-width: ($container-width - 2rem) / 3;
+      height: $lists-width / 3;
+      width: $lists-width / 3;
+      max-height: $container-width / 3;
+      max-width: $container-width / 3;
       .image {
         position: relative;
         height: 100%;
