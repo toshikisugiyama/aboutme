@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
 
 const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: Array<PageType>}) => (
   <Layout fileNames={fileNames}>
-    <section className="container">
+    <section className={`container ${styles.container}`}>
       <div className={styles.nav}>
         <PortfolioNav />
       </div>
