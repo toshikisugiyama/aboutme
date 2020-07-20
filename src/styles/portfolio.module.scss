@@ -9,11 +9,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
+  width: $lists-width - 6vw;
+  max-width: $container-width - 2rem;
   .item {
     position: relative;
-    width: $container-width / 2.2;
-    max-width: 42vw;
-    margin: 1rem 0.1rem;
+    width: ($lists-width - 10vw) / 2;
+    max-width: ($container-width - 4rem) / 2;
+    margin: 0 auto 1rem;
     background-color: #ffffff;
     border-radius: 1rem;
     overflow: hidden;
