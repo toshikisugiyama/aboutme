@@ -63,7 +63,7 @@ const Header = ({fileNames}: {fileNames: Array<PageType>}): JSX.Element => {
     const l = label === '/' ? 'top page' : label
     return Capitalize(l.replace('/', ''))
   }
-  const profileImage: string = '/images/profile.svg'
+  const profileImage: string = 'https://raw.githubusercontent.com/toshikisugiyama/aboutme/master/src/public/images/profile.svg'
   return (
     <header>
       <section className={`container ${styles.container}`}>
