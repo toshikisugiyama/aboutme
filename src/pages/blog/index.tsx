@@ -5,6 +5,7 @@ import Topics from '../../components/Topics'
 import Link from 'next/link'
 import styles from '../../styles/blog.module.scss'
 import { getPages } from '../../lib/pages'
+import Pagination from 'next-pagination'
 
 export const getStaticProps = async () => {
   const allPostsData = getStoredPostsData('blog')
@@ -30,6 +31,9 @@ const Blog = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: any}) 
           <Link href="/blog/[id]" as={`/blog/${id}`}><a className={styles.link}></a></Link>
         </article>
       ))}
+      <div className={styles.pagination}>
+        <Pagination total={allPostsData.length} />
+      </div>
     </section>
   </Layout>
 )

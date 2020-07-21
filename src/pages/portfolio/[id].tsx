@@ -34,10 +34,12 @@ export const Post = ({ postData, fileNames }: {postData: any, fileNames: Array<P
           <title>{postData.title}</title>
         </Head>
         <article className={`container ${styles.article}`}>
+          <div className={styles.topics}>
+            <Topics topicsString={postData.topics} />
+          </div>
           <div className={styles.title}>
             <h1>{postData.title}</h1>
           </div>
-          <Topics topicsString={postData.topics} />
           <div className={styles.date}>
             <Date dateString={postData.date} />
           </div>

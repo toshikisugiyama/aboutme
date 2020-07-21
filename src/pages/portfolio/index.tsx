@@ -7,6 +7,7 @@ import { getStoredPostsData } from '../../lib/posts'
 import Date from '../../components/Date'
 import Topics from '../../components/Topics'
 import Link from 'next/link'
+import Pagination from 'next-pagination'
 
 export const getStaticProps = async () => {
   const allPostsData = getStoredPostsData('portfolio')
@@ -39,6 +40,9 @@ const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: A
         </li>
       ))}
       </ul>
+      <div className={styles.pagination}>
+        <Pagination total={allPostsData.length} />
+      </div>
     </section>
   </Layout>
 )

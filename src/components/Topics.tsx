@@ -1,9 +1,11 @@
 import styles from '../styles/topics.module.scss'
 const Topics = ({ topicsString }: {topicsString: string}) => (
-  <div className={styles.topics}>
-    {topicsString.split(',').map((topic: string) => (
-      <span key={topic} className={styles.topic}>{topic}</span>
-    ))}
+  <div className={styles.wrapper}>
+    <ul className={styles.list}>
+      {topicsString.split(',').map((topic: string) => (
+        <li key={topic} className={styles.item}>{topic}</li>
+      ))}
+    </ul>
   </div>
 )
 

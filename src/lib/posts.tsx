@@ -45,5 +45,5 @@ export const getStoredPostsData = (post: string) => {
       ...matterResult.data
     }
   })
-  return allPostsData.sort(() => 1)
+  return allPostsData.sort(() => -1)
 }
