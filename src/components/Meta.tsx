@@ -6,13 +6,15 @@ const Meta = () => (
     <title key="title">{Seo.title}</title>
     <meta key="viewport" name="viewport" content={Seo.viewport} />
     <meta key="description" name="description" content={Seo.description} />
-    <meta key="og:type" name="og:type" content={Seo.openGraph.type} />
-    <meta key="og:url" name="og:url" content={Seo.openGraph.url} />
-    <meta key="og:title" name="og:title" content={Seo.openGraph.title} />
-    <meta key="og:description" name="og:description" content={Seo.openGraph.description} />
-    <meta key="og:image" name="og.image" content={Seo.openGraph.image} />
+    <meta key="og:type" property="og:type" content={Seo.openGraph.type} />
+    <meta key="og:url" property="og:url" content={Seo.openGraph.url} />
+    <meta key="og:title" property="og:title" content={Seo.openGraph.title} />
+    <meta key="og:description" property="og:description" content={Seo.openGraph.description} />
+    <meta key="og:site_name" property="og:site_name" content={Seo.openGraph.site_name} />
+    <meta key="og:image" property="og:image" content={Seo.openGraph.image} />
+    <meta key="twitter:card" name="twitter:card" content={Seo.twitter.card} />
+    <meta key="twitter:site" name="twitter:site" content={Seo.twitter.site} />
   </Head>
 )
-
 
 export default Meta
