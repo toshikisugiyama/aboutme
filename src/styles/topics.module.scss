@@ -10,12 +10,18 @@
     align-items: center;
     margin: 0 auto;
     .item {
-      padding: 0.1rem 0.5rem;
+      padding: 0.2rem 0.8rem;
       margin: 0.2rem 0.4rem 0.2rem 0;
       color: #ffffff;
       background-color: $topics-color;
       border-radius: 0.3rem;
       font-size: 1.2rem;
     }
+  }
+}
+.leftWrapper {
+  justify-content: flex-start;
+  .list {
+    margin: 0;
   }
 }

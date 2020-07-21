@@ -32,15 +32,22 @@ export interface TitleType {
 
 export interface ProfileType {
   birthYear: number,
-    birthPlace: string,
-    history: Array<HistoryType>,
-    summary: string,
-    skills: Array<string>
+  birthPlace: string,
+  history: {
+    title: string,
+    content: Array<HistoryType>,
+  },
+  summary: string,
+  skills: {
+    title: string,
+    content: string
+  }
 }
 
 export interface HistoryType {
   term: string,
-  content: string
+  content: string,
+  skill: string
 }
 
 export interface FormItemType {

@@ -10,7 +10,7 @@ export const getStaticProps = () => {
   return {props: {fileNames}}
 }
 
-const Contact = ({fileNames}: {fileNames: Array<PageType>}) => {
+const Contact = ({fileNames}: {fileNames: Array<PageType>}): JSX.Element => {
   const formItems: Array<FormItemType> = [
     { label: {en: 'name', ja: 'お名前'}, tag: 'input', type: 'text' },
     { label: {en: 'email', ja: 'メール'}, tag: 'input', type: 'email' },
@@ -21,20 +21,18 @@ const Contact = ({fileNames}: {fileNames: Array<PageType>}) => {
       <section className="container">
         <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact"/>
-          {
-            formItems.map((item: FormItemType, index: number) => (
-              <div key={item.label.en} className={styles.form__item}>
-                <label htmlFor={item.label.en} className={styles.label}>
-                  {`${item.label.ja} / ${Capitalize(item.label.en)}`}
-                </label>
-                {
-                  item.tag === 'input'
-                  ? <input type={item.type} name={item.label.en} id={item.label.en} className={styles.input} autoFocus={index===0?true:false} required/>
-                  : <textarea id={item.label.en} name={item.label.en} className={styles.textarea} cols={30} rows={10} required></textarea>
-                }
-              </div>
-            ))
-          }
+          {formItems.map((item: FormItemType, index: number) => (
+            <div key={item.label.en} className={styles.form__item}>
+              <label htmlFor={item.label.en} className={styles.label}>
+                {`${item.label.ja} / ${Capitalize(item.label.en)}`}
+              </label>
+              {
+                item.tag === 'input'
+                ? <input type={item.type} name={item.label.en} id={item.label.en} className={styles.input} autoFocus={index===0?true:false} required/>
+                : <textarea id={item.label.en} name={item.label.en} className={styles.textarea} cols={30} rows={10} required></textarea>
+              }
+            </div>
+          ))}
           <Button buttonType="submit" buttonText="OK" />
         </form>
       </section>
