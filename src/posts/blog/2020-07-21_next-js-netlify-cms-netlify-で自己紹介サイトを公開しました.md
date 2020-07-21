@@ -3,8 +3,20 @@ title: Next.js + Netlify CMS + Netlify で自己紹介サイトを公開しま�
 date: '2020-07-21'
 topics: 'React,Next.js,TypeScript,Netlify CMS, Netlify'
 ---
-## はじめの挨拶
-この度、[React](https://reactjs.org)のフレームワークである[Next.js](https://nextjs.org)を使って自己紹介サイトを作成しましたので、ご報告致します。当サイトでは、ブログなどのコンテンツの管理には [Netlify CMS](https://www.netlifycms.org) を使い、[Netlify](https://www.netlify.com) で公開しました。Next.jsを静的サイトジェネレーターとして使うことで、ページ間の遷移が早いユーザー満足度の高いサイトが実現出来たと自負しております。コンテンツ管理システム（Contents Management System: CMS）にはこれまでWordPressをよく用いてきましたが、Netlify CMSを用いることとしました。Netlify CMS内でマークダウン形式で記事を作成し、Next.jsで記事を読み込みページを生成するという流れです。ページの制作、公開の過程で新しく学んだことをここに書きました。
+## はじめに
+[React](https://reactjs.org)のフレームワークである[Next.js](https://nextjs.org)を使ってみたかったので、Next.jsを使って自己紹介ページを作ってみました。そして、Next.jsで作ったサイトを[Netlify](https://www.netlify.com) で公開しました。
+
+今回は、その過程で学んだことを書いておきます。
+
+## 目次
+
+1. Next.jsでブログサイトをつくる
+1. Netlify CMSを導入する
+1. Netlify で公開する
+
+また、ブログなどのコンテンツは [Netlify CMS](https://www.netlifycms.org) を使って管理できるようにしています。
+今回、Netlify CMSを使ってよかった点は、WordPressなどのコンテンツ管理システム（Contents Management System: CMS）などのように、データベースを。
+Next.jsを静的サイトジェネレーターとして使うことで、ページ間の遷移が早いユーザー満足度の高いサイトが実現出来たと自負しております。Netlify CMS内でマークダウン形式で記事を作成し、Next.jsで記事を読み込みページを生成するという流れです。ページの制作、公開の過程で新しく学んだことをここに書きました。
 
 ## どのようなサイトを作ったのか
 自己紹介サイトを作りました。  
