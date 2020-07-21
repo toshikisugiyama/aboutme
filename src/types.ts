@@ -3,11 +3,16 @@ export interface SeoType {
   description: string,
   viewport: string,
   openGraph: {
-      type: string,
-      url: string,
-      title: string,
-      description: string,
-      image: string,
+    type: string,
+    url: string,
+    title: string,
+    description: string,
+    site_name: string,
+    image: string,
+  },
+  twitter: {
+    card: string,
+    site: string
   }
 }
 
