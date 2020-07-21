@@ -30,7 +30,7 @@ const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: A
       {allPostsData.map(({id, title, date, topics}: {id: string, title: string, date: string, topics: string}) => (
         <li key={id} className={styles.item}>
           <article className={styles.contents}>
-            <Topics topicsString={topics} />
+            <Topics topicsString={topics} isCenter={true} />
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.date}>
               <Date dateString={date} />

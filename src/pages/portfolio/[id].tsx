@@ -35,7 +35,7 @@ export const Post = ({ postData, fileNames }: {postData: any, fileNames: Array<P
         </Head>
         <article className={`container ${styles.article}`}>
           <div className={styles.topics}>
-            <Topics topicsString={postData.topics} />
+            <Topics topicsString={postData.topics} isCenter={true} />
           </div>
           <div className={styles.title}>
             <h1>{postData.title}</h1>

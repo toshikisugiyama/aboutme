@@ -6,33 +6,8 @@
     text-align: center;
     font-size: 2.5rem;
   }
-  .history {
-    .item {
-      margin: 0 0 2.2rem;
-      .term {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 0 0 1rem;
-      }
-      .content {
-        padding: 0 0 0 2rem;
-      }
-    }
-  }
   .summary {
     text-align: justify;
     line-height: 1.5;
-  }
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    .skill {
-      background-color: $badge-color;
-      margin: 0.2rem;
-      padding: 0.3rem 0.8rem;
-      border-radius: 0.5rem;
-      font-size: 1.2rem;
-    }
   }
 }

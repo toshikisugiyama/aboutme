@@ -23,7 +23,7 @@ const Blog = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: any}) 
     <section className={`container ${styles.list}`}>
       {allPostsData.map(({id, title, date, topics}: {id: string, title: string, date: string, topics: string}) => (
         <article key={id} className={styles.item}>
-          <Topics topicsString={topics} />
+          <Topics topicsString={topics} isCenter={true} />
           <h2 className={styles.title}>{title}</h2>
           <div className={styles.date}>
             <Date dateString={date} />
