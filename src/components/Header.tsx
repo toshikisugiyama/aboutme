@@ -3,7 +3,6 @@ import { useRouter, NextRouter } from 'next/router'
 import { HeaderInfoType, PageType, TitleType } from '../types'
 import styles from '../styles/header.module.scss'
 import Capitalize from '../components/Capitalize'
-import Head from 'next/head'
 const Header = ({fileNames}: {fileNames: Array<PageType>}): JSX.Element => {
   const router: NextRouter = useRouter()
   const name: TitleType = {en: 'sugiyama toshiki', ja: 'スギヤマ トシキ'}
