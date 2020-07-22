@@ -4,7 +4,7 @@ date: '2020-07-21'
 topics: 'React,Next.js,TypeScript,Netlify CMS, Netlify'
 ---
 ## はじめに
-[React](https://reactjs.org)のフレームワークである[Next.js](https://nextjs.org)を使ってみたかったので、Next.jsを使って自己紹介ページを作ってみました。そして、Next.jsで作ったサイトを[Netlify](https://www.netlify.com) で公開しました。
+[React](https://reactjs.org)のフレームワークである[Next.js](https://nextjs.org)を使ってみたかったので、Next.jsを使って自己紹介ページを作ってみました。そして、サイトのビルド、公開には[Netlify](https://www.netlify.com) を使いました。
 
 今回は、その過程で学んだことを書いておきます。
 
