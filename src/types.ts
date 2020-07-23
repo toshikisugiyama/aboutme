@@ -1,7 +1,9 @@
 export interface SeoType {
   title: string,
+  charSet: string,
   description: string,
   viewport: string,
+  favicon: string,
   openGraph: {
     type: string,
     url: string,
@@ -11,8 +13,12 @@ export interface SeoType {
     image: string,
   },
   twitter: {
-    card: string,
-    site: string
+    cardType: string,
+    site: string,
+    creator: string,
+    title: string,
+    description: string,
+    image: string
   }
 }
 
