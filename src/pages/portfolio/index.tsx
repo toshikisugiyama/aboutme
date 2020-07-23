@@ -20,12 +20,21 @@ export const getStaticProps = async () => {
   }
 }
 
+const description = (): JSX.Element => {
+  return (
+    <p>
+      Laravel, Vue.js, React 等を使って作った作品です。
+    </p>
+  )
+}
+
 const Portfolio = ({ allPostsData, fileNames }: {allPostsData: any, fileNames: Array<PageType>}) => (
   <Layout fileNames={fileNames}>
     <section className={`container ${styles.container}`}>
       <div className={styles.nav}>
         <PortfolioNav />
       </div>
+      <div className={styles.description}>{description()}</div>
       <ul className={styles.list}>
       {allPostsData.map(({id, title, date, topics}: {id: string, title: string, date: string, topics: string}) => (
         <li key={id} className={styles.item}>

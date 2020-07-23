@@ -19,6 +19,16 @@ const images: Array<ImageType> = [...Array(imageFiles)].map((_: undefined, i: nu
   src: `https://raw.githubusercontent.com/${githubRepo}/master/drawing-${editNumberStyle(i+1)}/drawing-${editNumberStyle(i+1)}.svg`,
   url: `https://github.com/${githubRepo}/blob/master/drawing-${editNumberStyle(i+1)}/README.md`
 }))
+const description = (): JSX.Element => {
+  const illustrator: JSX.Element = <a href="https://www.adobe.com/jp/products/illustrator.html">Adobe Illustrator</a>
+  const game = <Link href="/portfolio/2020-05-16_名前をつけて早く呼ぶゲーム"><a>ゲーム</a></Link>
+  return (
+    <p>
+      {illustrator} を使って趣味で描いた絵です。
+      ここに載せた絵を使った{game}もあるので、御覧ください。
+    </p>
+  )
+}
 const Drawing = ({fileNames}: {fileNames: Array<PageType>}) => {
   return (
     <Layout fileNames={fileNames}>
@@ -26,6 +36,7 @@ const Drawing = ({fileNames}: {fileNames: Array<PageType>}) => {
         <div className={styles.nav}>
           <PortfolioNav />
         </div>
+        <div className={styles.description}>{description()}</div>
         <ul className={styles.lists}>
           {images.map((image: ImageType) => (
             <li key={image.id} className={styles.item}>
