@@ -1,19 +1,20 @@
 import Head from 'next/head'
 import { Seo } from '../config'
 
-const Meta = () => (
+const Meta = (): JSX.Element => (
   <Head>
-    <title key="title">{Seo.title}</title>
+    <title>{Seo.title}</title>
+    <meta key="charSet" charSet={Seo.charSet} />
     <meta key="viewport" name="viewport" content={Seo.viewport} />
     <meta key="description" name="description" content={Seo.description} />
-    <meta key="og:type" property="og:type" content={Seo.openGraph.type} />
-    <meta key="og:url" property="og:url" content={Seo.openGraph.url} />
-    <meta key="og:title" property="og:title" content={Seo.openGraph.title} />
-    <meta key="og:description" property="og:description" content={Seo.openGraph.description} />
-    <meta key="og:site_name" property="og:site_name" content={Seo.openGraph.site_name} />
-    <meta key="og:image" property="og:image" content={Seo.openGraph.image} />
-    <meta key="twitter:card" name="twitter:card" content={Seo.twitter.card} />
-    <meta key="twitter:site" name="twitter:site" content={Seo.twitter.site} />
+    {Object.entries(Seo.openGraph).map((og: Array<string>): JSX.Element => (
+      <meta key={og[0]} property={`og:${og[0]}`} content={og[1]} />
+    ))}
+    {Object.entries(Seo.twitter).map((tw: Array<string>): JSX.Element => (
+      <meta key={tw[0]} name={`twitter:${tw[0]}`} content={tw[1]} />
+    ))}
+    <link key="icon" rel="shortcut icon" type="image/x-icon" href={Seo.favicon}/>
+    <link key="apple-touch-icon" rel="apple-touch-icon"　sizes="180x180" href={Seo.favicon}/>
   </Head>
 )
 
