@@ -1,5 +1,6 @@
 import Layout from '../../components/Layout'
 import Head from 'next/head'
+import Link from "next/link"
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/Date'
 import Topics from '../../components/Topics'
@@ -33,18 +34,23 @@ export const Post = ({ postData, fileNames }: {postData: any, fileNames: Array<P
         <Head>
           <title>{postData.title}</title>
         </Head>
-        <article className={`container ${styles.article}`}>
-          <div className={styles.topics}>
-            <Topics topicsString={postData.topics} isCenter={true} />
-          </div>
-          <div className={styles.title}>
-            <h1>{postData.title}</h1>
-          </div>
-          <div className={styles.date}>
-            <Date dateString={postData.date} />
-          </div>
-          <section dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></section>
-        </article>
+        <section className="container">
+          <article className={styles.article}>
+            <div className={styles.topics}>
+              <Topics topicsString={postData.topics} isCenter={true} />
+            </div>
+            <div className={styles.title}>
+              <h1>{postData.title}</h1>
+            </div>
+            <div className={styles.date}>
+              <Date dateString={postData.date} />
+            </div>
+            <section dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></section>
+          </article>
+          <Link href="/blog">
+            <a className={styles.go_back}>戻る</a>
+          </Link>
+        </section>
       </>
     </Layout>
   )
