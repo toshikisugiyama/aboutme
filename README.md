@@ -9,8 +9,9 @@
 [<img src="https://raw.githubusercontent.com/toshikisugiyama/aboutme/master/src/public/images/uploads/qr-code.svg" alt="aboutme" width="40" height="40" style="margin: 0 10px" >](https://aboutme-toshikisugiyama.netlify.app)  [<img src="https://raw.githubusercontent.com/toshikisugiyama/aboutme/master/src/public/images/snsIcons/github.svg" alt="github" width="40" height="40" style="margin: 0 10px" >](https://github.com/toshikisugiyama/aboutme)
 
 ---
-
+<p align="center">
 <img src="https://raw.githubusercontent.com/toshikisugiyama/aboutme/master/src/public/images/profile.svg" alt="profile画像" width="150" height="150" >
+</p>
 
 ## 杉山俊樹
 1990年 兵庫県出身
