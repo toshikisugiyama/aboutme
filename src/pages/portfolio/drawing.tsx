@@ -12,7 +12,7 @@ export const getStaticProps = () => {
 const editNumberStyle = (num: number): string => (
   (num < 10) ? 0 + num.toString() : num.toString()
 )
-const imageFiles: number = 15
+const imageFiles: number = 18
 const githubRepo = 'toshikisugiyama/illustrator-works'
 const images: Array<ImageType> = [...Array(imageFiles)].map((_: undefined, i: number) => ({
   id: editNumberStyle(i+1),
