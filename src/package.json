@@ -9,9 +9,9 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "css-reset-and-normalize": "^2.3.5",
     "date-fns": "^2.14.0",
     "gray-matter": "^4.0.2",
-    "modern-css-reset": "^1.1.0",
     "next": "^10.0.3",
     "next-pagination": "^2.0.4",
     "react": "16.13.1",

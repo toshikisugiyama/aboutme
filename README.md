@@ -48,8 +48,11 @@ WordPressでのホームページ制作およびオンラインプログラミ�
 
 ### 2019年10月〜現在
 オンラインプログラミングスクール メンター
-- WordPress
+- JavaScript
+- Vue.js
+- Firebase
 - PHP
+- WordPress
 ### 2019年4月〜2019年9月
 NexSeed.Incでインターン(エンジニアクラス補佐・オフショア業務・自社サービス開発)
 - JavaScript
