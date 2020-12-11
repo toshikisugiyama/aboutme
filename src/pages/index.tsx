@@ -16,7 +16,7 @@ const profile: ProfileType = {
   history: {
     title: '経歴',
     content: [
-      {term: '2019年10月〜現在', content: 'オンラインプログラミングスクール メンター', skill: 'WordPress,PHP'},
+      {term: '2019年10月〜現在', content: 'オンラインプログラミングスクール メンター', skill: 'JavaScript,Vue.js,Firebase,PHP,WordPress'},
       {term: '2019年4月〜2019年9月', content: 'NexSeed.Incでインターン(エンジニアクラス補佐・オフショア業務・自社サービス開発)', skill: 'JavaScript,Vue.js,PHP,Laravel,Git'},
       {term: '2018年7月〜現在', content: 'ホームページ作成', skill: 'WordPress,PHP,JavaScript,jQuery,Git'},
       {term: '2018年4月〜2018年6月', content: 'フィリピン・セブ島のNexSeed.Incで留学。英語とWebコースで学ぶ。', skill: 'HTML, CSS, PHP, Git, GitHub'},
