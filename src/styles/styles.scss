@@ -11,6 +11,7 @@ body {
   }
   img {
     object-fit: contain;
+    max-width: 100%;
   }
   button {
     cursor: pointer;
@@ -27,9 +28,13 @@ body {
   }
   p {
     margin-bottom: 1rem;
+    line-height: 1.8;
   }
   a {
     text-decoration: none;
+  }
+  ol {
+    list-style-type: decimal;
   }
   .container {
     max-width: $container-width;
