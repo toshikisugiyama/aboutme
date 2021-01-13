@@ -1,5 +1,11 @@
 import styles from '../styles/topics.module.scss'
-const Topics = ({ topicsString, isCenter }: {topicsString: string, isCenter: boolean}): JSX.Element => {
+const Topics = ({
+  topicsString,
+  isCenter
+}: {
+  topicsString: string,
+  isCenter: boolean
+}): JSX.Element => {
   if (topicsString.length > 0) {
     return (
       <div className={`${styles.wrapper} ${!isCenter ? styles.leftWrapper : ''}`}>

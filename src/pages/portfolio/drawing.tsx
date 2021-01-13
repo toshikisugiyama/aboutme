@@ -12,7 +12,7 @@ export const getStaticProps = () => {
 const editNumberStyle = (num: number): string => (
   (num < 10) ? 0 + num.toString() : num.toString()
 )
-const imageFiles: number = 18
+const imageFiles: number = 19
 const githubRepo = 'toshikisugiyama/illustrator-works'
 const images: Array<ImageType> = [...Array(imageFiles)].map((_: undefined, i: number) => ({
   id: editNumberStyle(i+1),
@@ -38,7 +38,7 @@ const Drawing = ({fileNames}: {fileNames: Array<PageType>}) => {
         </div>
         <div className={styles.description}>{description()}</div>
         <ul className={styles.lists}>
-          {images.map((image: ImageType) => (
+          {images.reverse().map((image: ImageType) => (
             <li key={image.id} className={styles.item}>
               <div className={styles.image}>
                 <img src={image.src} alt={`image-${image.id}`} />
