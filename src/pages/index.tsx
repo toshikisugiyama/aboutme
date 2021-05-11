@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import { ProfileType, HistoryType, PageType } from '../types'
+import { ProfileType, PageType } from '../types'
 import styles from '../styles/home.module.scss'
 import { getPages } from '../lib/pages'
 import History from '../components/History'
@@ -16,6 +16,7 @@ const profile: ProfileType = {
   history: {
     title: '経歴',
     content: [
+      {term: '2021年4月～現在', content: 'モバイルアプリ開発', skill: 'Flutter,Cloud Functions,Node.js,TypeScript',},
       {term: '2021年2月～現在', content: 'Webシステム開発', skill: 'Nuxt.js,TypeScript,Express,GCP',},
       {term: '2019年10月〜現在', content: 'オンラインプログラミングスクール メンター【フロントエンドコース（Vue.jsとFirebaseを扱うコース）, WordPressコース（オリジナルテーマを作成するコース）】', skill: 'JavaScript,Vue.js,Firebase,PHP,WordPress'},
       {term: '2019年4月〜2019年9月', content: 'NexSeed.Incでインターン【エンジニアクラス補佐・オフショア業務・自社サービス（学習管理システム）開発】フィリピンに滞在し、英語でコミュニケーションを取りながら開発を行いました。', skill: 'JavaScript,Vue.js,PHP,Laravel,Git'},

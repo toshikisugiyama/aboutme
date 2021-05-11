@@ -47,6 +47,12 @@
 
 ## 経歴
 
+### 2021年4月～現在
+モバイルアプリ開発
+- Flutter
+- Cloud Functions
+- Node.js
+- TypeScript
 ### 2021年2月～現在
 Webシステム開発
 - Nuxt.js
